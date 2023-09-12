@@ -23,7 +23,7 @@ export default function Chat() {
   }, [selectedUserId]);
 
   function connectToWs() {
-    const ws = new WebSocket("ws:https://mern-chat-d384dcd3ca9f.herokuapp.com");
+    const ws = new WebSocket("wss://mern-chat-d384dcd3ca9f.herokuapp.com");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
